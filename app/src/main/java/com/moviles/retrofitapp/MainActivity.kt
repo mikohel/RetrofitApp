@@ -26,8 +26,9 @@ class MainActivity : AppCompatActivity() {
                         Log.d("retrofitresponse", "stats: ${stat.stat.stat_value}: ${stat.base_stat}")
                     }
                     Log.d("retrofitresponse","type:${resBody.type[0].type.name}")
+                    Log.d("retrofitresponse","PokeSprite: ${resBody.sprites.front_default}")
             }
-               
+
             }
             override fun onFailure(call: Call<PokemonEntry>, t: Throwable) {
                 Log.e("retrofitresponse","error: ${t.message}")

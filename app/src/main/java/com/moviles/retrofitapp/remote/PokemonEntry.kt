@@ -10,7 +10,10 @@ data class PokemonEntry(
     @SerializedName("types")
     val type: List<TypeEntry>,
     @SerializedName ("stats")
-    val stats:List<StatsEntry>
+    val stats:List<StatsEntry>,
+
+    @SerializedName("sprites")
+    val sprites: SpriteEntry
 )
 
 data class TypeEntry(
@@ -31,3 +34,9 @@ data class StatEntry(
     @SerializedName("name")
     val stat_value: String
 )
+
+data class SpriteEntry(
+    @SerializedName("front_default")
+    val front_default: String
+)
+
